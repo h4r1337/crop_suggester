@@ -48,11 +48,6 @@ In our case the target is `label` which contains the name of the crop that will 
 A machine learning model aims to make good predictions on new, previously unseen data. But if you are building a model from your data set, how would you get the previously unseen data?
 Well, one way is to divide your data set into two subsets training set and testing set. The training set is a subset of the original dataset which is used to train the model and the test set is also a subset to test the trained model.
 
- __________________________
-|                    |     |
-|____________________|_____|
-    *Training set*     *Test set*
-
 Based on the data we have, we can split the data using 2 methods either by splitting the whole data into two by using the function `train_test_split` defined in the python library `scikit-learn` or by dividing the whole data into 22 parts (each part containing features of 22 crops), and then using the same `train_test_split` function now on each parts and finally combining all into a final training and test set.
 We will do both method and analyse the accuracy at the end.
 
