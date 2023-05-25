@@ -58,3 +58,8 @@ Decision Tree is one of the most popular machine learning algorithms. A decision
 It has a hierarchical, tree structure, which consists of a root node, branches, internal nodes and leaf nodes. It uses a simple technique, wherin a yes/no question is asked and according to the answer the tree is split in smaller nodes. To determine how the features of a dataset should split nodes to form the tree, a measurement called Gini impurity is used.
 One of the limitations of decision trees is that they are largely unstable compared to other decision predictors. A small change in the data can result in a major change in the structure of the decision tree, which can convey a different result from what users will get in a normal event.
 
+#### Gaussian Naive Bayes
+
+Gaussian Naive Bayes (GNB) is a classification technique used in Machine Learning based on the probabilistic approach and Gaussian distribution.
+Gaussian Naive Bayes assumes that each feature has an independent capacity of predicting the output variable. Its advantages is that it doesn't require as much training data. 
+It handles both continuous and descrete data. It is highly scalable with the number of predictors and data points. It is fast and can be used to make real-time predictions.
