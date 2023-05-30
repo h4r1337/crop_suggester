@@ -63,3 +63,10 @@ One of the limitations of decision trees is that they are largely unstable compa
 Gaussian Naive Bayes (GNB) is a classification technique used in Machine Learning based on the probabilistic approach and Gaussian distribution.
 Gaussian Naive Bayes assumes that each feature has an independent capacity of predicting the output variable. Its advantages is that it doesn't require as much training data. 
 It handles both continuous and descrete data. It is highly scalable with the number of predictors and data points. It is fast and can be used to make real-time predictions.
+
+#### Logistic Regression
+
+It is one of the simplest algorithms in machine learning. It is used for solving classification problems. It uses a sigmoid function to mathematically calculate the probability of an event belonging to a certain class. The algorithm creates a linear decision boundary and applies the sigmoid function transform the output into a probability between 0 and 1.
+This makes it suitable for problems where the target variable is categorical or binary. It can handle large datasets efficiently and provides easily interpretable coefficients, allowing us to understand the impact of each feature on the predicted outcome.
+It can handle large datasets efficiently and provides easily interpretable coefficients, allowing us to understand the impact of each feature on the predicted outcome. 
+
