@@ -81,3 +81,20 @@ As decision tree are prone to overfitting, random forest is useful in reducing t
 XGBoost (eXtreme Gradient Boosting) is a popular and powerful machine learning algorithm that belongs to the gradient boosting family. It is a tree-based algorithm using gradient boosting framework. This algorithm is based on a feedback approach, where feedback from the decistion tree is taken so as to improve the decision tree further as it "boosts" the efficiency of the tree and helps 
 in bringing out a better accuracy. It employs a gradient descent algorithm to optimize the objective function, which includes both a loss function and a regularie term.
 XGBoost provides several advantages including high predictive accuracy, scalability, and the ability to handle a variety of data types.
+
+## Results
+
+After performing the data cleaning and visualizations, I implemented these machine learning algorithms on the features of the dataset.
+The five algorithms used are: 
+
+* Decision tree
+* Gaussian Naive Bayes
+* Logistic Regression
+* Random Forest
+* XGBoost
+
+The features selected of the dataset are N(Nitrogen), P(Phosphorous), K(Potassium) values of the soil, temperature, humidity, rainfall and pH value.
+
+After implementing the five algorithms on the dataset, we can see that Random Forest trained with my custom train and test split method gives the highest accuracy out of all the other algorithms (99.7%).
+
+![](./models/plot.png)
