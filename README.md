@@ -76,3 +76,8 @@ Random Forest is a supervised ensemble machine learning algorthm used in both cl
 During prediction, the output from all trees is averaged or aggregated to obtain the final result.
 As decision tree are prone to overfitting, random forest is useful in reducing the effect of overfitting and hence giving a more accurate output.
 
+#### XGBoost
+
+XGBoost (eXtreme Gradient Boosting) is a popular and powerful machine learning algorithm that belongs to the gradient boosting family. It is a tree-based algorithm using gradient boosting framework. This algorithm is based on a feedback approach, where feedback from the decistion tree is taken so as to improve the decision tree further as it "boosts" the efficiency of the tree and helps 
+in bringing out a better accuracy. It employs a gradient descent algorithm to optimize the objective function, which includes both a loss function and a regularie term.
+XGBoost provides several advantages including high predictive accuracy, scalability, and the ability to handle a variety of data types.
