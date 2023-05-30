@@ -70,3 +70,9 @@ It is one of the simplest algorithms in machine learning. It is used for solving
 This makes it suitable for problems where the target variable is categorical or binary. It can handle large datasets efficiently and provides easily interpretable coefficients, allowing us to understand the impact of each feature on the predicted outcome.
 It can handle large datasets efficiently and provides easily interpretable coefficients, allowing us to understand the impact of each feature on the predicted outcome. 
 
+#### Random Forest
+
+Random Forest is a supervised ensemble machine learning algorthm used in both classification as well as regression problems. It operats by constructing an ensemble of decision trees and combining their predictions to make a final prediction. Each decision tree in the forest is trained on a randomly selected subset of the data and a random subset of features.
+During prediction, the output from all trees is averaged or aggregated to obtain the final result.
+As decision tree are prone to overfitting, random forest is useful in reducing the effect of overfitting and hence giving a more accurate output.
+
