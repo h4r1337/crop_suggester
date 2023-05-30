@@ -8,7 +8,7 @@ COPY requirements.txt bootstrap.sh ./
 COPY crop_predict ./crop_predict
 COPY models ./models
 
-pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 EXPOSE 5000
 ENTRYPOINT ["/usr/src/app/bootstrap.sh"]
