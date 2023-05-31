@@ -18,10 +18,6 @@ model_files = {
 
 }
 
-# LabelEncoder object used to train XGBoost and CustomXGBoost model
-with open('../models/label_encoder.pkl', 'rb') as f:
-    label_encoder = pickle.load(f)
-
 @app.route('/predict', methods=['POST'])
 def predict():
     # Retrieve query parameters from the request
@@ -48,6 +44,10 @@ def predict():
 
     # Convert the predicted labels back to their original values
     if model_name == 'XGBoost' or model_name == 'CustomXGBoost':
+        # LabelEncoder object used to train XGBoost and CustomXGBoost model
+        with open('../models/label_encoder.pkl', 'rb') as f:
+            label_encoder = pickle.load(f)
+
         original_prediction = label_encoder.inverse_transform(prediction)
         return jsonify(original_prediction.tolist())
 
