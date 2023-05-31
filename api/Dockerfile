@@ -1,4 +1,4 @@
-FROM python:3.10.6-alpine
+FROM python:3.10.6
 
 RUN apk update
 RUN python3 -m pip install --upgrade pip
