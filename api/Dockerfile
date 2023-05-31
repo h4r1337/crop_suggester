@@ -1,7 +1,7 @@
-FROM python:3.10.6-alpine
+FROM python:3.10.6
 
-RUN apk update
-RUN apk add gcc
+RUN apt-get update
+RUN apt-get install -y gcc
 RUN python3 -m pip install --upgrade pip
 RUN pip install --no-cache-dir pipenv
 
