@@ -6,14 +6,14 @@ RUN python3 -m pip install --upgrade pip
 RUN pip install --no-cache-dir pipenv
 
 WORKDIR /usr/src/app
-COPY requirements.txt bootstrap.sh ./
+COPY Pipfile Pipfile.lock bootstrap.sh ./
 COPY crop_predict ./crop_predict
 COPY models ./models
 
 RUN pwd
 RUN tree /usr/src/app/
 
-RUN pip install -r requirements.txt
+RUN pipenv install --system --deploy
 
 EXPOSE 5000
 ENTRYPOINT ["/usr/src/app/bootstrap.sh"]
