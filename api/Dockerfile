@@ -10,9 +10,6 @@ COPY Pipfile Pipfile.lock bootstrap.sh ./
 COPY crop_predict ./crop_predict
 COPY models ./models
 
-RUN pwd
-RUN tree /usr/src/app/
-
 RUN pipenv install --system --deploy
 
 EXPOSE 5000
