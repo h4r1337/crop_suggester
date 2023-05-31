@@ -7,8 +7,12 @@ RUN pip install --no-cache-dir pipenv
 
 WORKDIR /usr/src/app
 COPY Pipfile Pipfile.lock bootstrap.sh ./
-COPY crop_predict ./crop_predict
 COPY models ./models
+COPY crop_predict ./crop_predict
+
+RUN ls -alp /usr/src/app
+RUN ls -alp /usr/src/app/models
+RUN ls -alp /usr/src/app/crop_predict
 
 RUN pipenv install --system --deploy
 
