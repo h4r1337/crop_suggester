@@ -5,16 +5,16 @@ import numpy as np
 app = Flask(__name__)
 
 model_files = {
-    'DecisionTree': '../models/DecisionTree.pkl',
-    'GaussianNaiveBayes': '../models/NBClassifier.pkl',
-    'LogisticRegression': '../models/LogisticRegression.pkl',
-    'RandomForest': '../models/RandomForest.pkl',
-    'XGBoost': '../models/XGBoost.pkl',
-    'CustomDecisionTree': '../models/CustomDecisionTree.pkl',
-    'CustomGaussianNaiveBayes': '../models/CustomNBClassifier.pkl',
-    'CustomLogisticRegression': '../models/CustomLogisticRegression.pkl',
-    'CustomRandomForest': '../models/CustomRandomForest.pkl',
-    'CustomXGBoost': '../models/CustomXGBoost.pkl',
+    'DecisionTree': 'usr/src/app/models/DecisionTree.pkl',
+    'GaussianNaiveBayes': 'usr/src/app/models/NBClassifier.pkl',
+    'LogisticRegression': 'usr/src/app/models/LogisticRegression.pkl',
+    'RandomForest': 'usr/src/app/models/RandomForest.pkl',
+    'XGBoost': 'usr/src/app/models/XGBoost.pkl',
+    'CustomDecisionTree': 'usr/src/app/models/CustomDecisionTree.pkl',
+    'CustomGaussianNaiveBayes': 'usr/src/app/models/CustomNBClassifier.pkl',
+    'CustomLogisticRegression': 'usr/src/app/models/CustomLogisticRegression.pkl',
+    'CustomRandomForest': 'usr/src/app/models/CustomRandomForest.pkl',
+    'CustomXGBoost': 'usr/src/app/models/CustomXGBoost.pkl',
 
 }
 
@@ -45,7 +45,7 @@ def predict():
     # Convert the predicted labels back to their original values
     if model_name == 'XGBoost' or model_name == 'CustomXGBoost':
         # LabelEncoder object used to train XGBoost and CustomXGBoost model
-        with open('../models/label_encoder.pkl', 'rb') as f:
+        with open('usr/src/app/models/label_encoder.pkl', 'rb') as f:
             label_encoder = pickle.load(f)
 
         original_prediction = label_encoder.inverse_transform(prediction)
