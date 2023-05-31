@@ -10,6 +10,9 @@ COPY requirements.txt bootstrap.sh ./
 COPY crop_predict ./crop_predict
 COPY models ./models
 
+RUN pwd
+RUN tree /usr/src/app/
+
 RUN pip install -r requirements.txt
 
 EXPOSE 5000
