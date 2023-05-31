@@ -49,7 +49,7 @@ def predict():
             label_encoder = pickle.load(f)
 
         original_prediction = label_encoder.inverse_transform(prediction)
-        return jsonify(original_prediction)
+        return jsonify(original_prediction.tolist()[0])
 
-    return jsonify(prediction)
+    return jsonify(prediction.tolist()[0])
 
