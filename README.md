@@ -68,7 +68,6 @@ It handles both continuous and descrete data. It is highly scalable with the num
 
 It is one of the simplest algorithms in machine learning. It is used for solving classification problems. It uses a sigmoid function to mathematically calculate the probability of an event belonging to a certain class. The algorithm creates a linear decision boundary and applies the sigmoid function transform the output into a probability between 0 and 1.
 This makes it suitable for problems where the target variable is categorical or binary. It can handle large datasets efficiently and provides easily interpretable coefficients, allowing us to understand the impact of each feature on the predicted outcome.
-It can handle large datasets efficiently and provides easily interpretable coefficients, allowing us to understand the impact of each feature on the predicted outcome. 
 
 #### Random Forest
 
@@ -98,3 +97,22 @@ The features selected of the dataset are N(Nitrogen), P(Phosphorous), K(Potassiu
 After implementing the five algorithms on the dataset, we can see that Random Forest trained with my custom train and test split method gives the highest accuracy out of all the other algorithms (99.7%).
 
 ![](./models/plot.png)
+
+## Deploying the model
+
+For the deployment phase of the project, I focused on creating a scalable and accessible solution. I developed a Flask web application that serves as the interface for users to interact with the models and obtain crop recommendations based on their input data.
+To ensure portability and reproducibility, I containerized the application using Docker. This allowed me to package the necessary dependencies and configurations into a single container.
+To enable seamless deployment, I leverages Render.com a platform that simplifies the deployment process and is free to use. With Render.com, I deployed the Docker container as a scalable and reliable web service.
+
+Upon successful deployment, users can access the crop prediction application by creating a POST request to the `/predict` endpoint in the deployed site with a json payload containing the required inputs such as N, P, K, temperature, humidity, ph, and rainfall with their values.
+The response will be the name of the crop.
+
+<!-- ## Builing a UI in Flutter -->
+<!---->
+<!-- To make this project more accessible and user friendly we need to build a simple user interface for this project. -->
+<!-- The more accessible way to do this is to build a mobile application that collects data from the user such as soil contents and wheather data and using our model in the backend gives the output to the user. -->
+<!-- That's where Flutter comes in. -->
+<!---->
+<!-- Flutter is an open-source UI software development kit (SDK) created by Google that allows developers to build beautiful, high-performance, and cross-platform applications. It utilizes a single codebase to create applications for multiple platforms, including iOS, Android, web, and desktop. -->
+<!-- Flutter follows a reactive and declarative programming approach, where the user interface is built using widgets, which are building blocks of Flutter appications. -->
+<!---->
